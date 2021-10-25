@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211024 19:24:27.670" rpa="false" schemaversion="2">
+<suite id="s1" name="testSiteKabum" source="C:\Nova pasta\SuiteSiteTestePratice\Tests\testSiteKabum.robot">
+<test id="s1-t1" name="Caso de Teste 01: Validar usuário inválido">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.kabum.com.br</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211024 19:24:27.994" level="INFO">Opening browser 'chrome' to base url 'https://www.kabum.com.br'.</msg>
+<status status="PASS" starttime="20211024 19:24:27.994" endtime="20211024 19:24:37.905"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211024 19:24:37.905" endtime="20211024 19:24:38.141"/>
+</kw>
+<status status="PASS" starttime="20211024 19:24:27.994" endtime="20211024 19:24:38.141"/>
+</kw>
+<kw name="Acessar a página home do site" library="Resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.kabum.com.br</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211024 19:24:38.145" level="INFO">Opening url 'https://www.kabum.com.br'</msg>
+<status status="PASS" starttime="20211024 19:24:38.144" endtime="20211024 19:24:40.375"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>KaBuM! | Maior E-commerce de Tecnologia e Games da América Latina</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211024 19:24:40.392" level="INFO">Page title is 'KaBuM! | Maior E-commerce de Tecnologia e Games da América Latina'.</msg>
+<status status="PASS" starttime="20211024 19:24:40.376" endtime="20211024 19:24:40.392"/>
+</kw>
+<status status="PASS" starttime="20211024 19:24:38.143" endtime="20211024 19:24:40.393"/>
+</kw>
+<kw name="Clicar no botão login" library="Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=linkLoginHeader</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211024 19:24:40.394" level="INFO">Clicking element 'id=linkLoginHeader'.</msg>
+<status status="PASS" starttime="20211024 19:24:40.394" endtime="20211024 19:24:40.612"/>
+</kw>
+<status status="PASS" starttime="20211024 19:24:40.393" endtime="20211024 19:24:40.612"/>
+</kw>
+<kw name="Clicar no campo de E-mail, CPF ou CNPJ" library="Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:inputUsuarioLogin</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211024 19:24:40.614" level="INFO">Clicking element 'id:inputUsuarioLogin'.</msg>
+<status status="PASS" starttime="20211024 19:24:40.613" endtime="20211024 19:24:43.901"/>
+</kw>
+<status status="PASS" starttime="20211024 19:24:40.613" endtime="20211024 19:24:43.901"/>
+</kw>
+<kw name="Digitar o CPF &quot;01358427860&quot; no campo de E-mail, CPF ou CNPJ" library="Resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=inputUsuarioLogin</arg>
+<arg>${Login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211024 19:24:43.905" level="INFO">Typing text '01358427860' into text field 'id=inputUsuarioLogin'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211024 19:24:44.117" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211024 19:24:43.959" endtime="20211024 19:24:44.117"/>
+</kw>
+<msg timestamp="20211024 19:24:44.122" level="FAIL">InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=95.0.4638.54)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00303AB3+2505395]
+	Ordinal0 [0x0029AE41+2076225]
+	Ordinal0 [0x001A2360+1057632]
+	Ordinal0 [0x001C54D9+1201369]
+	Ordinal0 [0x001E59F3+1333747]
+	Ordinal0 [0x001C3676+1193590]
+	Ordinal0 [0x001E5ADA+1333978]
+	Ordinal0 [0x001F5168+1397096]
+	Ordinal0 [0x001E58BB+1333435]
+	Ordinal0 [0x001C23E4+1188836]
+	Ordinal0 [0x001C323F+1192511]
+	GetHandleVerifier [0x0048CB36+1554566]
+	GetHandleVerifier [0x00534A0C+2242396]
+	GetHandleVerifier [0x00390E0B+523099]
+	GetHandleVerifier [0x0038FEB0+519168]
+	Ordinal0 [0x002A02FD+2097917]
+	Ordinal0 [0x002A4388+2114440]
+	Ordinal0 [0x002A44C2+2114754]
+	Ordinal0 [0x002AE041+2154561]
+	BaseThreadInitThunk [0x7688FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77667A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77667A6E+238]
+	(No symbol) [0x00000000]
+</msg>
+<status status="FAIL" starttime="20211024 19:24:43.905" endtime="20211024 19:24:44.122"/>
+</kw>
+<status status="FAIL" starttime="20211024 19:24:43.904" endtime="20211024 19:24:44.122"/>
+</kw>
+<kw name="Clicar no campo senha" library="Resource">
+<status status="NOT RUN" starttime="20211024 19:24:44.123" endtime="20211024 19:24:44.124"/>
+</kw>
+<kw name="Digitar senha &quot;123456&quot; no campo senha" library="Resource">
+<status status="NOT RUN" starttime="20211024 19:24:44.124" endtime="20211024 19:24:44.124"/>
+</kw>
+<status status="FAIL" starttime="20211024 19:24:27.993" endtime="20211024 19:24:44.124">InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=95.0.4638.54)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00303AB3+2505395]
+	Ordinal0 [0x0029AE41+2076225]
+	Ordinal0 [0x001A2360+1057632]
+	Ordinal0 [0x001C54D9+1201369]
+	Ordinal0 [0x001E59F3+1333747]
+	Ordinal0 [0x001C3676+1193590]
+	Ordinal0 [0x001E5ADA+1333978]
+	Ordinal0 [0x001F5168+1397096]
+	Ordinal0 [0x001E58BB+1333435]
+	Ordinal0 [0x001C23E4+1188836]
+	Ordinal0 [0x001C323F+1192511]
+	GetHandleVerifier [0x0048CB36+1554566]
+	GetHandleVerifier [0x00534A0C+2242396]
+	GetHandleVerifier [0x00390E0B+523099]
+	GetHandleVerifier [0x0038FEB0+519168]
+	Ordinal0 [0x002A02FD+2097917]
+	Ordinal0 [0x002A4388+2114440]
+	Ordinal0 [0x002A44C2+2114754]
+	Ordinal0 [0x002AE041+2154561]
+	BaseThreadInitThunk [0x7688FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77667A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77667A6E+238]
+	(No symbol) [0x00000000]
+</status>
+</test>
+<status status="FAIL" starttime="20211024 19:24:27.672" endtime="20211024 19:24:44.133"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="testSiteKabum">testSiteKabum</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
